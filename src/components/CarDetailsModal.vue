@@ -1,4 +1,5 @@
 <template>
+<!-- NOTE if using the same modal for different pieces of data, you will need to make the id unique -->
 <div class="modal carDetailsModal" :id="'carDetailsModal' + carBanana._id" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -28,13 +29,13 @@
 <script>
 import { carsService } from '../services/CarsService'
 // import $ from 'jquery'
-// NOTE if using npm to install jquery as a library - otherwise make sure script tags are in the index.html
+// NOTE make sure to import if using npm to install jquery as a library - otherwise make sure script tags are in the index.html
 
 export default {
   name: 'CarDetailsModal',
   props: {
-    carBanana: { type: Object, required: true },
-    testString: { type: String, required: true }
+    carBanana: { type: Object },
+    testString: { type: String }
   },
   setup(props) {
     return {

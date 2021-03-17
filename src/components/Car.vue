@@ -10,6 +10,8 @@
       </div>
         <button class="btn btn-primary" data-toggle="modal" :data-target="'#carDetailsModal' + car._id">Car Deetz</button>
       <CarDetailsModal :carBanana="car" :testString="'hi isabelle!'" />
+      <!-- you can pass multiple props if needed -->
+      <!-- left as carBanana to demonstrate that the prop name just needs to be consistent in the parent and child -->
   </div>
 </template>
 
